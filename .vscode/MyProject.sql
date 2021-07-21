@@ -41,6 +41,9 @@ CREATE TABLE concessions(
 	FOREIGN KEY (ticket_id) REFERENCES ticket_orders(ticket_id)
 	
 );
+
+SELECT *
+FROM concessions;
 --Data manipulation
 INSERT INTO customer(
 	customer_ticket,
@@ -103,7 +106,20 @@ VALUES(
 
 );
 
+INSERT INTO Movies(
+	movie_id,
+	movie_cost,
+	movie_director,
+	movie_cast,
+	ticket_id)
+VALUES(
+	4,
+	5.99,
+	'Diamond',
+	'Cast',
+	4
 
+);
 
 SELECT *
-FROM customer;
+FROM Movies;
