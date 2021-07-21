@@ -16,6 +16,8 @@ CREATE TABLE ticket_orders(
 	total_sold NUMERIC (7,2)
 );
 
+SELECT *
+FROM ticket_orders;
 --Movies
 
 CREATE TABLE Movies(
@@ -88,17 +90,20 @@ VALUES(
 INSERT INTO concessions(
 	food_drinks_id,
 	drinks,
-	food
+	food,
+	ticket_id
 
 )
 
 VALUES(
 	1,
 	'water',
-	'hotdog'
-	
+	'hotdog',
+	4
 
 );
+
+
 
 SELECT *
 FROM customer;
