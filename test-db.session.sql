@@ -7,6 +7,8 @@ CREATE TABLE customer(
 	
 );
 
+SELECT *
+FROM customer;
 --Ticket orders
 CREATE TABLE ticket_orders(
 	ticket_id SERIAL PRIMARY KEY,
@@ -16,6 +18,8 @@ CREATE TABLE ticket_orders(
 	total_sold NUMERIC (7,2)
 );
 
+SELECT *
+FROM ticket_orders;
 --Movies
 
 CREATE TABLE Movies(
@@ -28,7 +32,8 @@ CREATE TABLE Movies(
 	FOREIGN KEY(ticket_id) REFERENCES ticket_orders(ticket_id)
 
 );
-
+SELECT *
+FROM Movies;
 --concessions
 CREATE TABLE concessions(
 	food_drinks_id SERIAL PRIMARY KEY,
@@ -39,6 +44,8 @@ CREATE TABLE concessions(
 	FOREIGN KEY (ticket_id) REFERENCES ticket_orders(ticket_id)
 	
 );
+SELECT *
+FROM concessions;
 --Data manipulation
 INSERT INTO customer(
 	customer_ticket,
@@ -85,20 +92,7 @@ VALUES(
 	
 );
 
-INSERT INTO concessions(
-	food_drinks_id,
-	drinks,
-	food
-
-)
-
-VALUES(
-	1,
-	'water',
-	'hotdog'
-	
-
-);
 
 SELECT *
 FROM customer;
+
